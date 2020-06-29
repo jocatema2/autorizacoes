@@ -25,10 +25,7 @@ app.listen(port, () => {
  console.log('Servidor em execução no port: ' + port);
 });
 
-
-
 const db ='mongodb://admin1:admin1@ds363088.mlab.com:63088/autorizacoes'
-
 
 mongoose
     .connect(db, { 
