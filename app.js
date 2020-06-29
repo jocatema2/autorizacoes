@@ -19,9 +19,6 @@ app.get('/', (req, res) => {
 
 
 require('./Route/autorizacaoRoute.js')(app);
-require('./Service/autorizacaoService.js')(app);
-require('./Controller/autorizacaoController.js')(app);
-require('./MessageBroker/sender.js')(app);
 
 let port = 3003;
 app.listen(process.env.PORT || port)
