@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
     res.json({"message": "Welcome to Gestor de Autorizações app"});
 });
 
-
 require('./Route/autorizacaoRoute.js')(app);
 
 let port = 3003;
