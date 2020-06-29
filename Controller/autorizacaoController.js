@@ -1,5 +1,4 @@
 const Emprestimo = require('../Model/emprestimo.js');
-const Send = require('../MessageBroker/Sender.js');
 const Service = require('../Service/autorizacaoService.js');
 const http = require('request');
 
@@ -21,7 +20,7 @@ exports.create = (req, res) => {
         tituloObra: req.body.tituloObra,
         condicao: req.body.condicao
     });
-
+    
     var nome = emprestimo.nomeUser;
     http('https://gestaousers.herokuapp.com/users/' + nome,function (error, response, body) {
        if(error){
