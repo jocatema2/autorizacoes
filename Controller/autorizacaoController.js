@@ -1,5 +1,5 @@
 const Emprestimo = require('../Model/emprestimo.js');
-const Send = require('../MessageBroker/Sender.js');
+const Send = require('../MessageBroker/sender.js');
 const Service = require('../Service/autorizacaoService.js');
 const http = require('request');
 
