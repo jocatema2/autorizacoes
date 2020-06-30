@@ -13,7 +13,7 @@ exports.create = (req, res) => {
 
     // Create a Emprestimo
     const emprestimo = new Emprestimo({
-        idEmp: req.body.idEmp,
+        _id: req.body._id,
         inicio: req.body.inicio,
         fim: req.body.fim,
         nomeUser: req.body.nomeUser,
@@ -22,7 +22,7 @@ exports.create = (req, res) => {
     });
     
     var nome = emprestimo.nomeUser;
-    
+
     http('https://gestaousers.herokuapp.com/users/' + nome,function (error, response, body) {
        if(error){
            return res.status(400).send({
